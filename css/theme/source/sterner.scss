@@ -1,0 +1,63 @@
+/**
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(fonts/ddc-hardware/ddc-hardware.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #3c7498;
+
+$mainFont: 'Open Sans', sans-serif;
+$mainFontSize: 30px;
+$linkColor: #e7ad52;
+$linkColorHover: lighten( $linkColor, 20% );
+$headingFont: 'DDC Hardware', Impact, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$selectionBackgroundColor: #e7ad52;
+
+$heading1Size: 3em;
+$heading2Size: 2.25em;
+$heading3Size: 1.5em;
+$heading4Size: 1em;
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.flex-contain {
+	display:flex;
+	align-items:center;
+	&.align-top {
+		align-items:flex-start;
+	}
+	.col {
+		flex:1;
+		padding-left:.75em;
+		padding-right:.75em;
+	}
+}
+
+hr {
+	background-color: white;
+	border-color: white !important;
+	border-width:1px 0 0 0;
+}
+
+.strike {
+	text-decoration: line-through;
+}
